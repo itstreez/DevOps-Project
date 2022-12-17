@@ -1,0 +1,43 @@
+version: "3"
+services:
+  achi-php-apache:
+    build:
+      context: ./
+    container_name: achi-php-apache
+    ports:
+      - "8082:80"
+    volumes:
+      - /var/www/html/DevOps:/var/www/html
+    depends_on:
+      - achi-mysql
+    networks:
+      - wp-net
+    links:
+      - achi-mysql
+  achi-mysql:
+    image: mysql:5.7
+    container_name: achi-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: DevOps-Project
+    networks:
+      - wp-net
+  achi-phpmyadmin:
+      depends_on:
+        - achi-mysql
+      image: phpmyadmin/phpmyadmin
+      restart: always
+      ports:
+        - '8081:80'
+      environment:
+        PMA_HOST: achi-mysql
+        MYSQL_ROOT_PASSWORD: 123456
+      networks:
+        - wp-net
+      links:
+        - achi-mysql
+networks:
+  wp-net:
+    driver: bridge

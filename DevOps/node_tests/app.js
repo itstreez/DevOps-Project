@@ -19,7 +19,7 @@ app.get('/test', function (req, res) {
         resp.on('data', function (result) {
 
             if (result == variableToAssert)  {
-                console.log("true");
+                console.log("truee");
 
                 res.writeHead(200, {
                     'Content-Type': 'text/plain'

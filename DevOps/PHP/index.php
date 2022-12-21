@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM `Devops-Information`";
+$sql = "SELECT * FROM `Devops-Information` where id = 2"; 
 
 if($result = mysqli_query($conn, $sql)){
 

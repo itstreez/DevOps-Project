@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT * FROM `Devops-Information`"; 
-
+$testing = "hey";
 if($result = mysqli_query($conn, $sql)){
 
     if(mysqli_num_rows($result) > 0){
@@ -28,7 +28,7 @@ if($result = mysqli_query($conn, $sql)){
 
 
       echo $row['Statement']; 
-          echo 'hiiiiiiii';
+
      // echo json_encode($response);
 
     }

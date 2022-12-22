@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 const http = require('http');
 const path = __dirname + '/views/';
-const variableToAssert = 'This is a test that should not pass';
+const variableToAssert = 'This is a test that should pass';
 const port = 4040;
 
 router.use(function (req, res, next) {

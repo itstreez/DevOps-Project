@@ -12,7 +12,7 @@ router.use(function (req, res, next) {
 });
 
 app.get('/test', function (req, res) {
-    http.get('http://192.168.1.38:8082/', (resp) => {
+    http.get('http://192.168.1.42:8082/', (resp) => {
         resp.setEncoding('utf8');
 
         resp.on('data', function (result) {

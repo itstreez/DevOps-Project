@@ -28,7 +28,6 @@ if($result = mysqli_query($conn, $sql)){
 
 
 		echo $row['Statement'];
-echo "yeyy";	
 
      // echo json_encode($response);
 

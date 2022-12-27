@@ -12,14 +12,14 @@ router.use(function (req, res, next) {
 });
 
 app.get('/test', function (req, res) {
-    http.get('http://192.168.1.128:8082/', (resp) => {
+    http.get('http://192.168.1.29:8082/', (resp) => {
 
         resp.setEncoding('utf8');
 
         resp.on('data', function (result) {
 
             if (result == variableToAssert)  {
-                console.log("trueee");
+                console.log("yep");
 
                 res.writeHead(200, {
                     'Content-Type': 'text/plain'

@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 const http = require('http');
 const path = __dirname + '/views/';
-const variableToAssert = 'This is a test that should not pass';
+const variableToAssert = 'This is a test that should pass';
 const port = 4040;
 
 router.use(function (req, res, next) {
@@ -12,7 +12,7 @@ router.use(function (req, res, next) {
 });
 
 app.get('/test', function (req, res) {
-    http.get('http://192.168.1.49:8082/', (resp) => {
+    http.get('http://192.168.1.22:8082/', (resp) => {
         resp.setEncoding('utf8');
 
         resp.on('data', function (result) {

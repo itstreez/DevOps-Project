@@ -20,18 +20,8 @@ if($result = mysqli_query($conn, $sql)){
 
         while($row = mysqli_fetch_array($result)){
 
-           // echo $row['phrase'];
-
-    //$response = array();
-
-    //$response =  $row['Devops-Information'];
-
-
-		//echo $row['Statement'];
-
-     // echo json_encode($row['Statement']);
-echo "ewe";
-     // echo json_encode($response);
+      echo json_encode($row['Statement']);
+//	echo "test to fail";
 
     }
 

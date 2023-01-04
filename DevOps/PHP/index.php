@@ -27,7 +27,8 @@ if($result = mysqli_query($conn, $sql)){
     //$response =  $row['Devops-Information'];
 
 
-		echo $row['Statement'];
+		//echo $row['Statement'];
+		echo "testyahmar";
 
       //  echo json_encode($row['Statement']);
 

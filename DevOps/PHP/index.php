@@ -28,10 +28,9 @@ if($result = mysqli_query($conn, $sql)){
 
 
 		//echo $row['Statement'];
-		echo "testyahmar";
 
-      //  echo json_encode($row['Statement']);
-
+     // echo json_encode($row['Statement']);
+echo "ewe";
      // echo json_encode($response);
 
     }

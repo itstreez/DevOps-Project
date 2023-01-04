@@ -29,7 +29,7 @@ if($result = mysqli_query($conn, $sql)){
 
 		echo $row['Statement'];
 
-       // echo json_encode($row['Statement']);
+      //  echo json_encode($row['Statement']);
 
      // echo json_encode($response);
 
